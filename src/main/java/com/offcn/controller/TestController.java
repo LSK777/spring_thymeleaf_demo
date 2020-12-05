@@ -9,6 +9,11 @@ public class TestController {
         if(true){
 
         }
+
+        //add by kk 2020.12.05
+        while (true){
+
+        }
     }
 
 }
