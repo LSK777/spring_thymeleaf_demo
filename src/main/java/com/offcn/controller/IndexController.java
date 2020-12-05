@@ -75,6 +75,7 @@ public class IndexController {
         return "index05";
     }
 
+    //变颜色
     @RequestMapping("/index06")
     public String index06(Model model){
         model.addAttribute("date", new Date());
