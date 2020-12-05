@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index05</title>
+    <link rel="stylesheet" type="text/css" href="../static/pages-sampling.css" th:href="@{/pages-sampling.css}">
+</head>
+<body>
+<h1 th:if="${flag=='yes'}">不讲武德</h1>
+<br>
+<h1 th:unless="${flag=='yes'}">耗子尾汁</h1>
+<br>
+<div th:switch="${menu}">
+    <p th:case="admin">user is admin</p>
+    <p th:case="${manager}">user is manager</p>
+</div>
+<!--引入片段-->
+<div th:insert="~{footer::copy}"></div>
+
+<div th:include="~{footer::copy}"></div>
+
+<div th:replace="~{footer::copy}"></div>
+</body>
+</html>

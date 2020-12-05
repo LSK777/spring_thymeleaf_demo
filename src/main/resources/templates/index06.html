@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index06</title>
+</head>
+<body>
+<!--日期格式化-->
+<span th:text="${#dates.format(date,'yyyy年MM月dd日 hh:mm:ss')}"></span>
+<br>
+<!--数字格式化 参数二:整数位个数 参数三: 小数位个数-->
+<span th:text="${#numbers.formatDecimal(num,1,2)}"></span>
+<br>
+<!--内置函数-->
+<span th:if="${!#strings.isEmpty(str)}">hello 石头人</span>
+<br>
+<span th:text="${#strings.abbreviate(str,20)}"></span>
+<br>
+<span th:text="${#strings.substring(str,0,19)}"></span>
+</body>
+</html>
